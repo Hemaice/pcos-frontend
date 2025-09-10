@@ -4,7 +4,7 @@ import "./PredictionResult.css";
 
 const PredictionResult = () => {
   const location = useLocation();
-  const { prediction, formData } = location.state || {};
+  const { prediction } = location.state || {};
 
   if (!prediction && prediction !== 0) {
     return (

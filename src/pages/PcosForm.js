@@ -25,7 +25,6 @@ const PcosForm = () => {
     "Reg.Exercise(Y/N)": ""
   });
 
-  const [prediction, setPrediction] = useState(null);
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
@@ -133,16 +132,13 @@ const PcosForm = () => {
                 required
               />
               {field === "BMI" && <span className="form-help-text">Normal range: 18.5-24.9</span>}
-              }
               {field === "Waist:Hip Ratio" && <span className="form-help-text">Healthy ratio: &lt;0.85 for women</span>}
-              }
             </div>
           ))}
 
           <div className="form-actions">
             <button type="submit" disabled={loading}>
               {loading && <span className="loading-spinner"></span>}
-              }
               {loading ? "Analyzing..." : "Get Assessment Results"}
             </button>
           </div>
