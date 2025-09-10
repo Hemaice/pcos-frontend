@@ -41,7 +41,7 @@ const PcosForm = () => {
         payload[key] = isNaN(formData[key]) ? formData[key] : Number(formData[key]);
       });
 
-      const res = await axios.post("http://localhost:8080/api/predict", payload);
+      const res = await axios.post("https://pcos-api-5mno.onrender.com/api/predict", payload);
       // Navigate to result page with prediction data
       navigate('/result', { 
         state: { 
